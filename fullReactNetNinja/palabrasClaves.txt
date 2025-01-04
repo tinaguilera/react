@@ -1,0 +1,64 @@
+SPA (single page application)
+    is a web app implementation that loads only a single web document,
+    and then updates the body content of that single document via JavaScript APIs such as Fetch when different content is to be shown
+
+
+React Components
+    React lets you create components, reusable UI elements for your app. In a React app, every piece of UI is a component. 
+    React components are regular JavaScript functions except: Their names always begin with a capital letter. They return JSX markup
+
+Anonymous functions
+
+useState hook
+
+useEffect hook
+
+
+JSON Server :
+
+    Is a lightweight tool that quickly turns a json file into a full REST API. This is helpful when you nees to work with simulated data before having a real backend.
+    It simulates a real backend with CRUD operations:
+        create : POST
+        Read : GET
+        Update : PUT or PATCH
+        Delete : DELETE
+    
+    Why?
+        Test your frontend without a real backend :  if you app needs Server data but the backend is not ready, you can use Server to simulate it.
+        Quick and easy setup : All you need is a JSON file with initial data
+        Realistic Simulation : It responds like a real server, including filters, searches and pagination.
+
+    How Does JSON Server Work?
+        1. The db.json file is youe "database" : this file contains the initial data for your API.
+            Example : 
+            {
+                "blogs": [
+                    { "id": 1, "title": "Post 1", "body": "Contenido del post 1" },
+                    { "id": 2, "title": "Post 2", "body": "Contenido del post 2" }
+                ]
+            }
+
+        2. Start the server: When you roun the command json-server --watch db.json, it turns the db.json file into a real REST API. For example:
+            GET /blogs : Fetches all blogs
+            GET /blogs/1 : Fetches the blos with ID 1
+            Post /blogs :  Create a new blogs
+            PUT /blogs/1 : Update the blog with ID 1
+            DELETE /blogs/1 : Deletes the blog with ID 1
+        3. Your app connect to the server : You update your frontend to use the API endpoints like http://localhost:3001
+
+¿Qué necesitas para usar JSON Server?
+    Archivo JSON (db.json): Contiene los datos iniciales para tu API.
+
+    JSON Server instalado: Puedes instalarlo con Yarn o npm:
+
+
+    yarn add json-server --dev
+    Levantar el servidor: Ejecutas el comando:
+
+
+    yarn start:json
+    O directamente:
+
+
+    json-server --watch db.json --port 3001
+    Configurar tu frontend para consumir la API: Cambias las URL de tu app para apuntar a http://localhost:3001.

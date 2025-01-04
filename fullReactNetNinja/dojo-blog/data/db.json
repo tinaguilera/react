@@ -1,0 +1,16 @@
+{
+  "blogs": [
+    {
+      "id": "2",
+      "title": "Aprendiendo Node.js",
+      "body": "Node.js permite ejecutar JavaScript del lado del servidor.",
+      "author": "María López"
+    },
+    {
+      "id": "3",
+      "title": "Desarrollo Frontend",
+      "body": "El desarrollo frontend implica el diseño de interfaces de usuario.",
+      "author": "Carlos García"
+    }
+  ]
+}
