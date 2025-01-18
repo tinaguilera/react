@@ -25,13 +25,15 @@ function App() {
               />
           </div>
       </section>
-      <section className=" bg-gray-800 py-10">
+
+      {useCanRestartApp()&&(      <section className=" bg-gray-200 py-10">
         <div className="max-w-4xl mx-auto">
             <CalorieTracker
               activities = {state.activities}
             />
         </div>
-      </section>
+      </section>)}
+
       <section className="p-10 mx-auto max-w-4xl">
         <ActivityList
           activities = {state.activities}
